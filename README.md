@@ -1,7 +1,6 @@
 # hello-karyon-rxnetty
 
 
-
 ## Build Tasks
 
 ### Running the app
