@@ -18,6 +18,8 @@ package com.kenzan.karyon.rxnetty.endpoint;
 import io.netty.buffer.ByteBuf;
 import io.reactivex.netty.protocol.http.server.HttpServerRequest;
 
+import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.regex.Pattern;
 
 import com.sun.jersey.api.uri.UriPattern;
@@ -26,11 +28,17 @@ import rx.Observable;
 
 public class HelloEndpoint {
 
+    private static final int _1000000 = 1000000;
+
     public Observable<String> getHello() {
         return Observable.just("Hello");
     }
 
     public Observable<String> getHelloName(HttpServerRequest<ByteBuf> request) {
+        
+        BigDecimal[] val = new BigDecimal[_1000000];
+        Arrays.fill(val, BigDecimal.TEN);
+
         UriPattern pattern = new UriPattern(Pattern.compile("/hello/(.*)"));
         String name = pattern.match(request.getUri()).group(1);
 
