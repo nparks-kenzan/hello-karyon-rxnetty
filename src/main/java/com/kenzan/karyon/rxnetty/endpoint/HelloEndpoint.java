@@ -28,7 +28,7 @@ import rx.Observable;
 
 public class HelloEndpoint {
 
-    private static final int _1000000 = 1000000;
+    private static final int iBigHonkingNumber = 1000000;
 
     public Observable<String> getHello() {
         return Observable.just("Hello");
@@ -36,7 +36,7 @@ public class HelloEndpoint {
 
     public Observable<String> getHelloName(HttpServerRequest<ByteBuf> request) {
         
-        BigDecimal[] val = new BigDecimal[_1000000];
+        BigDecimal[] val = new BigDecimal[iBigHonkingNumber];
         Arrays.fill(val, BigDecimal.TEN);
 
         UriPattern pattern = new UriPattern(Pattern.compile("/hello/(.*)"));
