@@ -13,6 +13,9 @@ nameOverride: ""
 fullnameOverride: ""
 namespace: "apps"
 
+configmapdata:
+  userdata: "Some random value"
+
 service:
   type: LoadBalancer
   port: 80
