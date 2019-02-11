@@ -11,7 +11,7 @@ image:
 
 nameOverride: ""
 fullnameOverride: ""
-namespace: "apps"
+
 
 configmapdata:
   userdata: "Some random value"
